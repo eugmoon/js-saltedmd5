@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Test page</title>
+	<link href="css/simplehash.css" rel="stylesheet" type="text/css"/>
+	<script src="script/sjcl/sjcl.js" type="text/javascript"></script>
+	<script src="script/sjcl/aes.js" type="text/javascript"></script>
+	<script src="script/sjcl/sha256.js" type="text/javascript"></script>
+	<script src="script/sjcl/bitArray.js" type="text/javascript"></script>
+	<script src="script/sjcl/sjcl-random.js" type="text/javascript"></script>
+	<script src="script/isaac.js" type="text/javascript"></script>
+	<script src="script/simplehash.js" type="text/javascript"></script>
+	<script src="script/md5hash.js" type="text/javascript"></script>
+</head>
+<body onload="initState();">
+	<div align="center">
+		<form action="test.html" id="form" method="post">
+			<input class="input" id="input_message" name="message" type="password" value=""/>
+			<input class="input" id="input_submit" name="Submit message" onclick="processInput();" type="button" value="Submit message"/><br/>
+			<span class="label" id="label_salt">Salt</span>
+			<span class="label" id="label_digest">Salted MD5 message digest</span><br/>
+			<input class="output" id="output_salt" name="salt" size="50" type="text" value=""/>
+			<input class="output" id="output_digest" name="digest" size="50" type="text" value=""/>
+		</form>
+	</div>
+</body>
+</html>

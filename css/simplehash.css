@@ -1,0 +1,39 @@
+.label {
+	font-weight: bold;
+	position: relative;
+	top: 5px;
+}
+.output {
+	margin: 0px 5px;
+	position: relative;
+	top: 10px;
+}
+
+#form {
+	position: relative;
+	top: 100px;
+}
+#input_message {
+	margin: 20px 10px;
+	position: relative;
+	left: -16px;
+	text-align: right;
+}
+#input_submit {
+	position: relative;
+	left: -16px;
+}
+#label_digest {
+	left: 92px;
+}
+#label_salt {
+	left: 70px;
+}
+#output_digest {
+	color: #00FF00;
+	text-align: left;
+}
+#output_salt {
+	color: #FF0000;
+	text-align: right;
+}
