@@ -1,3 +1,63 @@
+describe('32-bit Addition', function () {
+	
+	it('should add together 0x00000000 and 0x00000001', function () {
+		expect(
+			(add32b_op16b(0x00000000, 0x00000001)).toString(16)
+		).to.be(
+			'1'
+		);
+	});
+	
+	it('should add together 0x7ffffffe and 0x00000001', function () {
+		expect(
+			(add32b_op16b(0x7ffffffe, 0x00000001)).toString(16)
+		).to.be(
+			'7fffffff'
+		);
+	});
+	
+	it('should add together 0x7fffffff and 0x00000001', function () {
+		expect(
+			(add32b_op16b(0x7fffffff, 0x00000001)).toString(16)
+		).to.be(
+			'80000000'
+		);
+	});
+	
+	it('should add together 0x80000001 and 0x00000000', function () {
+		expect(
+			(add32b_op16b(0x80000001, 0x00000000)).toString(16)
+		).to.be(
+			'80000001'
+		);
+	});
+	
+	it('should add together 0x80000001 and -0x00000001', function () {
+		expect(
+			(add32b_op16b(0x80000001, -0x00000001)).toString(16)
+		).to.be(
+			'80000000'
+		);
+	});
+	
+	it('should add together 0xfffffffe and 0x00000001', function () {
+		expect(
+			(add32b_op16b(0xfffffffe, 0x00000001)).toString(16)
+		).to.be(
+			'ffffffff'
+		);
+	});
+	
+	it('should add together 0xffffffff and 0x00000001', function () {
+		expect(
+			(add32b_op16b(0xffffffff, 0x00000001)).toString(16)
+		).to.be(
+			'0'
+		);
+	});
+	
+});
+
 describe('MD5 Hex-encoding', function () {
 	
 	it('should create a hex-encoded MD5 hash of an ASCII value', function () {
