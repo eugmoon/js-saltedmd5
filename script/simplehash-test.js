@@ -1,18 +1,10 @@
 describe('32-bit Addition', function () {
 	
-	it('should add together 0x00000000 and 0x00000001', function () {
+	it('should add together 0x00000000 and -0x00000001', function () {
 		expect(
-			(add32b_op16b(0x00000000, 0x00000001)).toString(16)
+			(add32b_op16b(0x00000000, -0x00000001)).toString(16)
 		).to.be(
-			'1'
-		);
-	});
-	
-	it('should add together 0x7ffffffe and 0x00000001', function () {
-		expect(
-			(add32b_op16b(0x7ffffffe, 0x00000001)).toString(16)
-		).to.be(
-			'7fffffff'
+			'ffffffff'
 		);
 	});
 	
@@ -24,27 +16,11 @@ describe('32-bit Addition', function () {
 		);
 	});
 	
-	it('should add together 0x80000001 and 0x00000000', function () {
-		expect(
-			(add32b_op16b(0x80000001, 0x00000000)).toString(16)
-		).to.be(
-			'80000001'
-		);
-	});
-	
 	it('should add together 0x80000001 and -0x00000001', function () {
 		expect(
 			(add32b_op16b(0x80000001, -0x00000001)).toString(16)
 		).to.be(
 			'80000000'
-		);
-	});
-	
-	it('should add together 0xfffffffe and 0x00000001', function () {
-		expect(
-			(add32b_op16b(0xfffffffe, 0x00000001)).toString(16)
-		).to.be(
-			'ffffffff'
 		);
 	});
 	
