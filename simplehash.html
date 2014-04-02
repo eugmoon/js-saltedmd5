@@ -16,7 +16,8 @@
 <body onload="initState();">
 	<div align="center">
 		<form action="test.html" id="form" method="post">
-			<input class="input" id="input_message" name="message" type="password" value=""/>
+			<!-- input class="input" id="input_message" name="message" type="password" value=""/ -->
+			<input class="input" id="input_message" name="message" type="file" value=""/>
 			<input class="input" id="input_submit" name="Submit message" onclick="processInput();" type="button" value="Submit message"/><br/>
 			<span class="label" id="label_salt">Salt</span>
 			<span class="label" id="label_digest">Salted MD5 message digest</span><br/>
